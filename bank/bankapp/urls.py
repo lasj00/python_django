@@ -21,5 +21,6 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('hello', views.hello, name = 'hello'),
-    path('templ', views.helloTemplate, name = 'templ')
+    path('templ', views.helloTemplate, name = 'templ'),
+    path('<int:cust_id>/', views.show_customer, name = 'customer')
 ]
